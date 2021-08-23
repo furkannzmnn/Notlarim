@@ -1,0 +1,13 @@
+#ELASTİCSEARCH
+elastic searc kullanmamın sebebi sql sorgularındaki like methodunun maliyetli olması(CPU TÜKETİYOR)
+
+Elasticsearch	->	Database
+Index	->	Table
+Document	->	Row
+Field	->	Column
+
+
+#KOTLİN
+entity sınıflarını kotlin ile kullanmamın temel sebebi immutable yapısı ve boilerplate kodlardan kurtarması
+
+
