@@ -26,6 +26,8 @@ tüm fieldların final olması anlamına gelir.
 -DEPENCY INJECTİON
 bu işlemi depency inversion ilkesi ile yaparız. bu ilke yüksek seviye modüllerin düşük seviye modüllere bağlı olamaması gerektiğini belirtir.
 
+-
+
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 
