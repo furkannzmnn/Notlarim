@@ -35,15 +35,20 @@ tüm fieldların final olması anlamına gelir.
 
 <pre><code>
  NEDİR ? =  kısaca iki birim arasındaki etkileşimi sağlayan ve bu yüzden iki tarafa da anlayabileceği dille konuşması gereken bir yapıdır.
+ 
+ 
  Java da Interface 3 Farklı alanda kullanımı bulunur.
 
-Sınıf Arayüzü: Sınıf ve enum tiplerin arayüzü vardır = Sahip olduğu bütün methodların arayüzüne denir.
+1- Sınıf Arayüzü: Sınıf ve enum tiplerin arayüzü vardır = Sahip olduğu bütün methodların arayüzüne denir.
 
-Method Arayüzü: Methodların arayüzü vardır. =  Method arayüzü dönüş tipi varsa parametre ve varsa exception gibi değerlerin olduğu arayüzlerdir. 
+2- Method Arayüzü: Methodların arayüzü vardır. =  Method arayüzü dönüş tipi varsa parametre ve varsa exception gibi değerlerin olduğu arayüzlerdir. 
 *O arayüzün ne yaptığını ifade eden bilgisidir
- Interface: Tam anlamıyla tüm methodları soyut olan sınıftır.
+
+3- Interface: Tam anlamıyla tüm methodları soyut olan sınıftır.
  interfacelerin metotları varsayılan halde public abstract dır.
  abstract ile farkı , abstract sınıfların içinde soyut methodlar haricinde somut yani concrete metotlarda bulunur.
+ interface sadece arayüz sağlar. Durum ve gerçekleştirme(state) sağlamaz. Normal bir sınıftan farkı da budur. Normal sınıflar state yönetimi de sağlar. Tabiki şuana kadar bu bilgiyi doğru kabul ettik. Fakat Java SE8 ile birlikte artık interfacelerde de state yönetimi sağlanabiliyor.(ileriki dakikalarda anlatılacak)
+ Arayüzlerin constructor yani yapıcı methodları yoktur ve nesnesi oluşturulamaz.
  
 
 Signatür nedir ? 
