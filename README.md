@@ -66,6 +66,19 @@ Not: return tipi ve fırlatılan exceptionlar imzaya dahil değildir.
 
 <pre><code>
 bu işlemi depency inversion ilkesi ile yaparız. bu ilke yüksek seviye modüllerin düşük seviye modüllere bağlı olamaması gerektiğini belirtir.
+</code></pre>
+
+#### JPA & Hibernate
+<pre><code>Tüm ilişkileri lazy tanımla
+*OneToOne ve OneToMany ilişkilerinde cascade kullan onun dışındakilerde kullanma.
+*Embedded/Embeddable yerine her zaman Entity kullan (sebebi : nesne üzerinde sorgu işlemi yapamıyoruz)
+*derin inheritance hiyararşilerinden kaçının (SİNGLE_TABLE) kullanının -> Performans için
+*GeneratedValue implemantasyonunda 'SEQUENCE' kullan (her sql desteklemez)
+* Hiçbir zaman Entity dönme , Her senaryoya ait kendi dtonu oluştur. -> 
+*LazyInilization Excepiton probleminin en iyi çözüm yolu 'FETCH JOIN'dir.
+
+
+
 
 </code></pre>
 
