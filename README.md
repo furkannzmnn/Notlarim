@@ -25,7 +25,16 @@ entity sınıflarını kotlin ile kullanmamın temel sebebi immutable yapısı v
 #### Constructor
 <pre><code>
 1-Çok Sayıda Parametreyle Karşılaştığınızda veya anlaşılmazlık sorunu olduğunda  Builder Kullanın
+ Gördüğünüz gibi Builder aslında sınıf içerisinde tanımlanmış başka bir statik sınıf ve build() harici bütün
+    metotlarından this nesnesini döndürüyor. Yani istemci builder nesnesini geri aldığı için
+    zincirleme metot çağrıları yaparak asıl oluşturmak istediğimiz BesinDegeri nesnesini yaratabilir.
+Burada dikkat edilmesi gereken şey, zincirleme metot çağrılarını yaparken tamamen Builder nesnesini kullanıyoruz, son ana kadar build() metodunu çağırmadan BesinDegeri nesnesi yaratılmıyor. İstemci yaratmak istediği nesnenin alanlarını doldurduktan sonra build() metodunu çağırınca BesinDegeri yapıcı metodu çalıştırılarak bir daha değiştirilmesi mümkün olmayan (immutable) bir nesne oluşuyor. Böyle hem okuması/yazması kolay bir kod hem de her ortamda sorunsuz çalışacak değiştirilemez (immutable) bir nesne yaratmış oluyoruz.
 
+Eğer alanlar için sınırlama getirmek isterseniz (kalori 0’dan küçük olamaz gibi) bunu ister atama metotlarında isterseniz yapıcı metot içerisinde kontrol edebilirsiniz. İstemci uygun olmayan bir değer geçerse IllegalStateException fırlatarak nesnenin oluşmasını engelleyebilirsiniz.
+
+Builder deseni çok sayıda opsiyonel parametre gerektiren nesneleri yaratmada büyük esneklik sağlar, aynı Builder sınıfını kullanarak çok sayıda nesne oluşturabilirsiniz. Buna karşılık olarak yazdığınız kod satırı sayısı biraz artmakta ama sağladığı avantajlar düşünülünce bu durum gözardı edilebilir. Sadece 3 parametreli sınıflarda Builder kullanmak çok gerekli olmayabilir ancak parametre sayısının ileride artacağını düşünüyorsanız sonradan değiştirmektense ilk başta builder kullanmak daha mantıklı olabilir.
+
+Özetleyecek olursak builder tasarım deseni hem JavaBeans yönteminden çok daha güvenli olduğu için hem de çok sayıdaki parametreden dolayı sınıf yapıcı veya statik fabrika metodu kullanmanın getireceği okunabilirlik problemlerini çözdüğü için sıklıkla tercih edilir. 
 
 
 2- Nesne Yaratılmasını İstemediğiniz Sınıfları Private Constructor  İle Güçlendirin
