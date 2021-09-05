@@ -30,7 +30,6 @@ Nesne yaratılmasını nasıl önleriz -> Çözümü çok basit. constructor(yap
 avantajlarından bahsettik şimdi de bir dezavantajından bahsedelim.
  bu private yapıcı metot aynı zamanda sınıfın kalıtılmasını da engeller
 Biz yukarıdaki yardımcı sınıfta hem varsayılan yapıcı metodun tanımlanmasını engellediğimiz için hem de kendi yapıcı metodumuzu private tanımladığımız için, bu sınıfı kalıtacak bir çocuk sınıfın çağırabileceği bir yapıcı metot bulunmamaktadır.
-![image](https://user-images.githubusercontent.com/31289019/132133957-4513da10-5d5d-42ee-8f21-7434d462f7e8.png)
 
 </code></pre>
 
