@@ -24,7 +24,11 @@ entity sınıflarını kotlin ile kullanmamın temel sebebi immutable yapısı v
 ------------------------------------------------------------------------------------------------------------------------------------------------
 #### Constructor
 <pre><code>
-Nesne Yaratılmasını İstemediğiniz Sınıfları Private Constructor  İle Güçlendirin
+1-Çok Sayıda Parametreyle Karşılaştığınızda veya anlaşılmazlık sorunu olduğunda  Builder Kullanın
+
+
+
+2- Nesne Yaratılmasını İstemediğiniz Sınıfları Private Constructor  İle Güçlendirin
 Bazen herhangi bir yapıcı method(constructor) tanımlanmadığı zaman  Java derleyicisi otomatik olarak parametre almayan public bir varsayılan constructor (default constructor) tanımlayacaktır. Bir istemci açısından bu varsayılan yapıcı metodun, açıkça tanımlanmış diğer yapıcı metotlardan hiçbir farkı yoktur. Bu sebeple, birçok API içerisinde istemeden de olsa nesne yaratılabilen sınıflar bulunmaktadır. Nesne yaratılmasının önüne geçmek için sınıfı Abstract yapmak çözüm sağlamaz. sebebi -> bu sınıf kalıtılarak child classdan nesne yaratılabilir. veya ek olarak kodu okuyan kişi veya yazılımcı bu sınıfın kalıtılmak için tasarlandığı algısını  veya sonucunu çıkarabilir.
 Nesne yaratılmasını nasıl önleriz -> Çözümü çok basit. constructor(yapıcı method) tanımlarken bunları private yapın. Biz açıkça bir yapıcı metot tanımladığımız zaman, derleyici varsayılan public yapıcı metodu tanımlamaz. (CONSTRUCTOR -> PhoneNumber classını anlat )
 avantajlarından bahsettik şimdi de bir dezavantajından bahsedelim.
