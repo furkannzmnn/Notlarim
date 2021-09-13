@@ -2,3 +2,6 @@ Optional Pratikleri -> https://medium.com/swlh/playing-with-java-optional-70ffec
 
 
 jAVA SORULARI -> https://medium.com/@sunny21700254/core-java-interview-questions-8d1dc5919088
+
+JAVA GARBAGE COLLECTOR
+https://tugrulbayrak.medium.com/jvm-garbage-collector-nedir-96e76b6f6239
