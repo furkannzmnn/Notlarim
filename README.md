@@ -82,6 +82,20 @@ Not: return tipi ve fırlatılan exceptionlar imzaya dahil değildir.
 
 
 </code></pre>
+
+#### Temel Sınıf Kavramları
+
+<pre><code>
+1- primitive ve reference tipler (heap ve stack)
+2-static variable
+3-static method
+4-instance variable
+5-instance method
+6 pass by value -> https://metinalniacik.medium.com/java-pass-by-reference-m%C4%B1-yoksa-pass-by-value-mu-a0f8935772b5
+7-stack ve heap -> https://medium.com/t%C3%BCrkiye/stack-ve-heap-kavram%C4%B1-59adcb29d454
+
+</code></pre>
+
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 
