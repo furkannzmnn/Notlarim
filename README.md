@@ -93,6 +93,7 @@ Not: return tipi ve fırlatılan exceptionlar imzaya dahil değildir.
 5-instance method
 6 pass by value -> https://metinalniacik.medium.com/java-pass-by-reference-m%C4%B1-yoksa-pass-by-value-mu-a0f8935772b5
 7-stack ve heap -> https://medium.com/t%C3%BCrkiye/stack-ve-heap-kavram%C4%B1-59adcb29d454
+8-this -> https://medium.com/@bits.rahulgupta/java-this-keyword-77ada255f321
 
 </code></pre>
 
