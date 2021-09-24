@@ -106,6 +106,11 @@ Runtimeden yani Çalışma zamanından önce bu değerlerin bilinmesi gerekiyor.
 REFERENCE TYPE NEDİR ?
 Pointer’ları stackte değerleri heap(yığın) de bulunan veri tipleridir. Örnek olarak; String, int[] verebiliriz. Herhangi bir değer girilmediğinde varsayılan değer null olacaktır.
 
+2-static variable
+
+
+
+
 
 </code></pre>
 
