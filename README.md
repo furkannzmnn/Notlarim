@@ -86,13 +86,13 @@ Not: return tipi ve fırlatılan exceptionlar imzaya dahil değildir.
 #### Temel Sınıf Kavramları
 
 <pre><code>
-0-HEAP VE STACK NEDİR
+0- HEAP VE STACK NEDİR
 1- primitive ve reference tipler (heap ve stack)
 $- primite ve reference type karşılaştırması
-2-static variable
-3-static method -> udemy akın hoca
 4-instance variable
 5-instance method
+2-static variable
+3-static method -> udemy akın hoca
 6 pass by value -> https://metinalniacik.medium.com/java-pass-by-reference-m%C4%B1-yoksa-pass-by-value-mu-a0f8935772b5
 7-stack ve heap -> https://medium.com/t%C3%BCrkiye/stack-ve-heap-kavram%C4%B1-59adcb29d454
 8-this -> https://medium.com/@bits.rahulgupta/java-this-keyword-77ada255f321  // -> udemy akın hoca
@@ -106,9 +106,12 @@ Runtimeden yani Çalışma zamanından önce bu değerlerin bilinmesi gerekiyor.
 REFERENCE TYPE NEDİR ?
 Pointer’ları stackte değerleri heap(yığın) de bulunan veri tipleridir. Örnek olarak; String, int[] verebiliriz. Herhangi bir değer girilmediğinde varsayılan değer null olacaktır.
 
-2-static variable
+instance variable
+Instance Variable(member variables) , hatirlayacagimiz gibi sinif seviyesindeki degiskenlerdi. Yani bu instance variable’lar bir metot, yapilandirici, kod blogu icerisinde tanimlanamaz.
+Instance Variable’lara varsayilan olarak deger atamasi yapilir. Asagidaki tabloda varsayilan olarak atanan bu degerleri gorebiliriz.
 
-
+LOCAL VARİABLE
+YAŞAM SÜRESİ VARDIR. BLOKTAN VEYA DÖNGÜDEN ÇIKINCAYA KADARDIR. ÇIKTIKTAN SONRA ÖLÜRLER.
 
 
 
