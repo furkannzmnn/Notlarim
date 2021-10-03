@@ -5,3 +5,5 @@ jAVA SORULARI -> https://medium.com/@sunny21700254/core-java-interview-questions
 
 JAVA GARBAGE COLLECTOR
 https://tugrulbayrak.medium.com/jvm-garbage-collector-nedir-96e76b6f6239
+
+java stream pratikleri -> https://praveergupta.in/practical-guide-to-java-stream-api-7aadc02908f7
