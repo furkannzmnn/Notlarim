@@ -129,9 +129,12 @@ bu işlemi depency inversion ilkesi ile yaparız. bu ilke yüksek seviye modüll
 </code></pre>
 
 #### JPA & Hibernate
-<pre><code>Tüm ilişkileri lazy tanımla
-*OneToOne ve OneToMany ilişkilerinde cascade kullan onun dışındakilerde kullanma.
-*Embedded/Embeddable yerine her zaman Entity kullan (sebebi : nesne üzerinde sorgu işlemi yapamıyoruz)
+<pre><code>Tüm ilişkileri lazy tanımla -> derin object hiyarerşilerde spesifik bir entitye eriştiğimizde bu entity ile ilişkili pek çok ilgili-ilgisiz diğer entitynin yüklenmesinin önüne geçiyor.
+
+*OneToOne ve OneToMany ilişkilerinde cascade kullan onun dışındakilerde kullanma. -> 
+
+*Embedded/Embeddable yerine her zaman Entity kullan (sebebi : nesne üzerinde sorgu işlemi yapamıyoruz) -> entity içindeki sütünlara karşılık gelen değerlerde tutuluyor
+
 *derin inheritance hiyararşilerinden kaçının (SİNGLE_TABLE) kullanının -> Performans için
 *GeneratedValue implemantasyonunda 'SEQUENCE' kullan (her sql desteklemez)
 * Hiçbir zaman Entity dönme , Her senaryoya ait kendi dtonu oluştur. -> 
