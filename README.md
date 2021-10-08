@@ -159,6 +159,9 @@ int[] b = a; // şu anda b ve a referans tipleri aynı yeri gösteriyor.
 b[2] = 10; // bu kısımda b 2. indexdeki veriyi değiştirmesine rağmen a[2] de değişiyor. Çünkü ikinci satırda aynı adresi gösteriyorlar.
 System.out.println(a[0] + “, “ + a[1] + “, “ + a[2]); // 1, 2, 10
 System.out.println(b[0] + “, “ + b[1] + “, “ + b[2]); // 1, 2, 10
+
+Bazı referans tiplerinde ise güncelleme işlemi gerçekleştirilemez. Güncelleme işlemi yapmaya çalıştığınızda heap üzerinde yeni bir nesne oluşturulur ve pointer yeni nesneyi gösterir. Bu tip nesnelere immutable object (değişmez nesne) denir. Bu duruma örnek olarak String verilebilir.
+
 ----------------------------------------------------------------------
 
 instance variable
