@@ -87,8 +87,11 @@ Not: return tipi ve fırlatılan exceptionlar imzaya dahil değildir.
 
 <pre><code>
 0- HEAP VE STACK NEDİR
+-  KISACA HEAP
+-  KISACA STACK
 1- primitive ve reference tipler (heap ve stack)
 $- primite ve reference type karşılaştırması
+-  JVM MİMARİSİ
 4-instance variable
 5-instance method
 2-static variable
@@ -97,21 +100,75 @@ $- primite ve reference type karşılaştırması
 7-stack ve heap -> https://medium.com/t%C3%BCrkiye/stack-ve-heap-kavram%C4%B1-59adcb29d454
 8-this -> https://medium.com/@bits.rahulgupta/java-this-keyword-77ada255f321  // -> udemy akın hoca
 
- PRİMİTİVE TYPE NEDİR ?
 
+KISACA STACK ? 
+
+LIFO (Last in First out) son giren ilk çıkar mantığında çalışır.
+Veri depolama alanı çok geniş olmadığından kullanımı kolay ve hızlıdır.
+Veriler Big and Little Endian (artan ya da azalan) adres mantığında tutulur.
+Derleme zamanında oluşturulur.
+Life time (yaşam süresi) kısa olan değişkenler tutulur. Ör; local variables (yerel değişkenler).
+Static allocation (Kullanılacak depolama alanının boyutu biliniyorsa stack işe yarayacaktır.)
+Bir Java uygulamasında sadece tek bir stack yoktur. Her bir thread’in kendi stack’i vardır.
+Bir stack üzerindeki veriye kendi thread’inden başka bir thread erişemez.
+Doğru kullanılmadığında java.lang.StackOverFlowError hatası alınır.
+
+----------------------------------------------------------------------
+KISACA HEAP
+Heap stack’e göre daha büyük boyuta sahiptir.
+Stack’e göre daha fazla alana sahip olduğundan stack’e göre daha yavaştır.
+Heap’teki veriler karışık şekilde sıralanır. 
+Çalışma zamanında oluşturulur.
+Dynamic allocation (Kullanılacak depolama alanının boyutu bilinmiyorsa ya da sürekli değişken olacak ise heap kullanmak doğru olacaktır.)
+Bir Java uygulamasında tüm thread’ler için sadece bir tane heap bulunmaktadır.
+Doğru kullanılmadığında java.lang.OutOfMemoryError hatası alınır.
+
+
+----------------------------------------------------------------------
+ PRİMİTİVE TYPE NEDİR ?
 stack ve heap bellekte yani ramda bulunan mantıksal yapılara verilen isimdir.
-Primitif tip dediğimiz int, short, byte, long, decimal, double, float gibi değerler value type olarak adlandırılırlar ve stack bölümünde tutulurlar.
+Primitif tip dediğimiz int, short, byte, long, double, float gibi değerler value type olarak adlandırılırlar ve stack bölümünde tutulurlar.
 Runtimeden yani Çalışma zamanından önce bu değerlerin bilinmesi gerekiyor. Çünkü işletim sistemi program çalışmadan önce stack de belirli bir yer ayırır eğer bu bölüm kodu yazan kişi tarafından aşılırsa stack taşma hatası ile (stack overflow) karşılaşılabilir. 
+----------------------------------------------------------------------
 
 REFERENCE TYPE NEDİR ?
 Pointer’ları stackte değerleri heap(yığın) de bulunan veri tipleridir. Örnek olarak; String, int[] verebiliriz. Herhangi bir değer girilmediğinde varsayılan değer null olacaktır.
+Primitive type’larda (==) kullanırsak bu değişkenlerin içindeki değerlerin eşit olup olmadığına kontrol eder.
+Örneğin
+int a = 5;
+int b = 5;
+System.out.println(a == b);
+Sonuç true olarak dönecektir.
+Reference type’larda ise (==) nesnelerin adreslerinin eşit olup olmadığını kontrol eder. Eğer değişkenlerin içindeki değerlerin eşit olup olmadığını kontrol etmek istiyorsak, bu durumda equals metodu kullanılır.
+Örneğin
+Long a = new Long(5);
+Long b = new Long(5);
+System.out.println(a == b);
+Sonuç false dönecektir çünkü adresleri farklıdır.
+System.out.println(a.equals(b));
+Sonuç true dönecektir çünkü değişkenlerin içindeki değerler aynıdır.
+Atama (=) işlemi de diğer işlemler gibi farklılık gösterir. Primivite type’larda (=) kullandığımızda değerden yeni bir kopya oluşturur.
+Örneğin
+int a = 5;
+int b = a; // “b”nin değeri de 5 oldu.
+a = 10; // “a”nın değeri 10 olarak değişti. Fakat bu durum “b”yi etkilemedi. Çünkü “b” primitive type’dır ve “b”nin değeri hala 5 tir.
+Reference type’lar için durum biraz farklıdır.
+Örneğin
+int[] a = {1,2,3};
+int[] b = a; // şu anda b ve a referans tipleri aynı yeri gösteriyor.
+b[2] = 10; // bu kısımda b 2. indexdeki veriyi değiştirmesine rağmen a[2] de değişiyor. Çünkü ikinci satırda aynı adresi gösteriyorlar.
+System.out.println(a[0] + “, “ + a[1] + “, “ + a[2]); // 1, 2, 10
+System.out.println(b[0] + “, “ + b[1] + “, “ + b[2]); // 1, 2, 10
+----------------------------------------------------------------------
 
 instance variable
 Instance Variable(member variables) , hatirlayacagimiz gibi sinif seviyesindeki degiskenlerdi. Yani bu instance variable’lar bir metot, yapilandirici, kod blogu icerisinde tanimlanamaz.
 Instance Variable’lara varsayilan olarak deger atamasi yapilir. Asagidaki tabloda varsayilan olarak atanan bu degerleri gorebiliriz.
+----------------------------------------------------------------------
 
 LOCAL VARİABLE
 YAŞAM SÜRESİ VARDIR. BLOKTAN VEYA DÖNGÜDEN ÇIKINCAYA KADARDIR. ÇIKTIKTAN SONRA ÖLÜRLER.
+----------------------------------------------------------------------
 
 
 
