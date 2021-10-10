@@ -173,6 +173,17 @@ LOCAL VARİABLE
 YAŞAM SÜRESİ VARDIR. BLOKTAN VEYA DÖNGÜDEN ÇIKINCAYA KADARDIR. ÇIKTIKTAN SONRA ÖLÜRLER.
 ----------------------------------------------------------------------
 
+STATİC
+
+Bazen nesnelerin öyle özellikleri olurki nesneden nesneye değişmez. aynı sınıftan oluşturulmuş tüm nesneler için aynıdır.
+Çünkü aslen bir tane değişken ve tek değer yeterlidir. 
+diğer elemanlar dinamik yani nesne için oluşturuluyor. Ama static ile tanımladığımız static yanş nesne için oluşturulmuyor.
+
+-- static değişkenlerin nesnelerin ortak durumunu oluştururlar.
+-- static değişkenlerin tek bir değeri vardır ve tek kopyası , onlar da sınıftadırlar.
+-- static değişkenlere ulaşmak için nesneye ihtiyaç yoktur sınıf üzerinden ulaşılırlar.
+-- staticlere sadece sınıf üzerinden de değil sınıfların referanslarının üzerinden de ulaşılabilir.
+-- static değişkenin değeri tüm nesneler için aynıdır.
 
 
 </code></pre>
