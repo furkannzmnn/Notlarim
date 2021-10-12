@@ -198,6 +198,10 @@ Bu şekilde tanımlanan sabitelerde Camel Case kullanılmaz. büyük harflar kul
 E COMMERCE ÖRNEKLEMESİ (STRİNG PRODUCT_NOT_FOUND)
 
 
+NESNELERİN ANLAMSIZ YA DA GEREKSİZ OLMASI NE DEMEKTİR ?
+Nesnesini oluştursak bile öörneğin productNotFoundan bir tane olması gerekir veya Math kütüphanesindeki PI den bir tane olması gerekir.
+Bu durumda Sınıf olabilecek tek nesne gibi düşünülebilir. ve bu şekilde kullanılır.
+
 
 </code></pre>
 
