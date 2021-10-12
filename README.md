@@ -185,6 +185,19 @@ diğer elemanlar dinamik yani nesne için oluşturuluyor. Ama static ile tanıml
 -- staticlere sadece sınıf üzerinden de değil sınıfların referanslarının üzerinden de ulaşılabilir.
 -- static değişkenin değeri tüm nesneler için aynıdır.
 
+-- nesne methodları static olsun olmasın tüm değişken ve methodlara yani tüm üyelere(members) ulaşırlar.
+-- Ama static methodlar sadece static değişkenlere doğrudan ulaşabilirler.Nesne değişkenlerine ulaşamazlar.Çünkü statik method zaten nesneyi var saymadığından ancak nesne
+var olmadan varolan değişken ve methodlara ulaşması söz konusudur.
+
+NE ZAMAN STATİC
+-- nesne merkezli programlamada asıl olan nesnedir.her şeyin, bir nesne olarak düşünülmesi ve yapılması gerekir.
+
+-- Static ve final olan tanımlamlar ile sınıflar üzerinden erişilen ve değeri değişmeyen constant oluşturulabilir. 
+Bu şekilde tanımlanan sabitelerde Camel Case kullanılmaz. büyük harflar kullanılır ve kelimeler arasına _ konur.
+"public static final double PI = 3.14234233324
+E COMMERCE ÖRNEKLEMESİ (STRİNG PRODUCT_NOT_FOUND)
+
+
 
 </code></pre>
 
