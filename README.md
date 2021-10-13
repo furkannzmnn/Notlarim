@@ -173,6 +173,19 @@ LOCAL VARİABLE
 YAŞAM SÜRESİ VARDIR. BLOKTAN VEYA DÖNGÜDEN ÇIKINCAYA KADARDIR. ÇIKTIKTAN SONRA ÖLÜRLER.
 ----------------------------------------------------------------------
 
+CONSTRUCTOR VE THİS
+kurucular içinde tanımlandığı sınıfın ismini alır.
+isimleri diğer sınıfların aksine UPPER CAMEL CASE uyarlar.
+kurucuların dönüş tipi ve değeri yoktur.
+kurucular nesne oluşturulurken new anahtar kelimesi ile çağrılır.
+
+2 tür constructor vardır.
+1- ARGÜMANSIZ KURUCULAR
+2- ARGÜMANLI KURUCULAR.
+
+Eğer bir constructor argüman alıyor ise compiler default constructorı artık sağlamaz peki neden ?
+
+-------------
 STATİC
 
 Bazen nesnelerin öyle özellikleri olurki nesneden nesneye değişmez. aynı sınıftan oluşturulmuş tüm nesneler için aynıdır.
