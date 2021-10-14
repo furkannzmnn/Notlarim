@@ -123,6 +123,13 @@ Dynamic allocation (Kullanılacak depolama alanının boyutu bilinmiyorsa ya da 
 Bir Java uygulamasında tüm thread’ler için sadece bir tane heap bulunmaktadır.
 Doğru kullanılmadığında java.lang.OutOfMemoryError hatası alınır.
 
+### HEAP KUŞAKLARI
+Young Generation(Genç Kuşak): Bu kuşak tüm yeni nesnelerin oluşturulduğu ve yaşlanmaya başladığı kuşaktır. Yeni oluşan nesneler bu kuşakta tutulur. Young Generation dolduğunda ise bu ileride göreceğimiz bir başlık olan ‘Minor Garbage Collection’ işlemini tetikler. Ölü/kullanılmayan/unreferenced nesneler burada çok hızlı dolar ve toplanmayı bekler. Belli bir süre sonra ‘surviving’ hayatta kalan nesneler ‘Old Generation’ alanına taşınır.
+
+Old Generation(Yaşlı Kuşak): Bu kuşak uzun süre hayatta kalan nesnelerin bellekte tutulduğu yerdir. Genç kuşakta belli bir süre(belirlenmiş bir threashold değeri kadar) duran nesneler bu kuşağa alınır. Old Generation dolduğunda ise ‘Major Garbage Collection’ işlemini tetikler.
+
+Stop-the-World: Bütün minor ve major garbage collection işlemleri ‘Stop-the-World’ eventlerdir. Yani garbage collector işini yaparken uygulamadaki tüm diğer threadler durur. Ta ki garbage collector işini yapana kadar. Bu sebeple garbage collector optimizasyonu çok önemlidir. Minor ve Major garbage collection işlemlerinin sayısını düşürerek uygulamanızın daha performanslı ve stabil çalışmasını sağlayabilirsiniz. Tabiki bu durum uygulamadan uygulamaya değişiklik gösterebilir. Bu sebeple Garbage Collector Tuning yapılmalıdır.
+Permanent Generation(Kalıcı Kuşak): Bu kuşak JVM tarafından gerekli olan class ve methodlar hakkında metadataları tutar. Uygulamanın çalışma esnasında dolabilir. Ayrıca Java SE’de yer alan kütüphane sınıfları ve metodları da burada tutulabilir. Bu kuşağın çöp toplama işlemi ‘Full Garbage Collection’ içinde yer alır.
 
 ----------------------------------------------------------------------
  PRİMİTİVE TYPE NEDİR ?
