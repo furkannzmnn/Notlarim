@@ -7,3 +7,5 @@ JAVA GARBAGE COLLECTOR
 https://tugrulbayrak.medium.com/jvm-garbage-collector-nedir-96e76b6f6239
 
 java stream pratikleri -> https://praveergupta.in/practical-guide-to-java-stream-api-7aadc02908f7
+
+conventions - https://medium.com/javarevisited/java-naming-conventions-suggested-by-google-704880db4f89
