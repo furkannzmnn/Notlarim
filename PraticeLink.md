@@ -11,3 +11,5 @@ java stream pratikleri -> https://praveergupta.in/practical-guide-to-java-stream
 conventions - https://medium.com/javarevisited/java-naming-conventions-suggested-by-google-704880db4f89
 
 transactional exception handling -> https://medium.com/codex/spring-transactional-and-exceptions-46ef031c75fb
+
+custom validate -> https://medium.com/@avijitbarua/find-entity-by-spring-jpa-based-of-dynamic-search-parameters-4d4efb4cd36f
