@@ -225,6 +225,12 @@ Bu durumda Sınıf olabilecek tek nesne gibi düşünülebilir. ve bu şekilde k
 
 </code></pre>
 
+### ARRAYS
+Arrayların'in memoride contiguous özelliği vardır. Arrayler  içi dolu olsa da olmasada memoride belirli bir alan kaplarlar.
+Teorik olarak bir array'in alabileceği max item sayısı MAX_INTEGER-1
+Arraylerin size değerini Arrays.copyOf ile değiştirebilirim.
+
+
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 
