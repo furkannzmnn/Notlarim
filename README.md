@@ -259,6 +259,52 @@ bu işlemi depency inversion ilkesi ile yaparız. bu ilke yüksek seviye modüll
 
 </code></pre>
 
+#### REST API BEST PRACTİCE
+
+<pre><code>
+* geriye bir text döndürme , bir kesin kural olmasa da geriye json ile dönüş yapalım.
+* “Content-Type: application/json” olarak ayarla.
+* URI'lerde fiil kullanma -> 
+GET: /books/:slug/generateBookCover/ YERİNE  GET: /books/:slug/bookCover/  KULLANALIM . Çünkü burada zaten http methodu olan GET ne yapmak istediğinizi açıkca ifade ediyor.
+"# Don’t do this
+POST: /books/createNewBook/
+# Do this
+POST: /books/"
+
+*  resourcelar için çoğul isimler kullanın
+* Response Body'deki hata ayrıntılarını döndürün ->
+
+<pre><code>
+{
+    "error": "Invalid payload.",
+    "detail": {
+        "name": "This field is required."
+    }
+}
+</code></pre>
+* HTTP durum kodlarına özellikle dikkat edin (message , detail)
+* HTTP durum kodlarını tutarlı bir şekilde kullanmalısınız ->
+GET: 200 OK
+PUT: 200 OK
+POST: 201 Created
+PATCH: 200 OK
+DELETE: 204 No Content
+
+* Resource'ları iç içe geçirme
+* Sondaki eğik çizgileri zarif bir şekilde kullanın
+
+*filtering and pagination için querystring  kullanın
+* 401 Unauthorized ve 403 Forbidden arasındaki Farkı öğrenin ->
+Tüketici kimlik doğrulama bilgileri sağlamadı mı? SSO Jetonları geçersiz/zaman aşımına uğradı mı? 👉 401 Unauthorized.
+Tüketicinin kimliği doğru bir şekilde doğrulandı, ancak kaynağa erişmek için gerekli izinlere/uygun izne sahip değil mi? 👉403 Forbidden.
+ 
+*HTTP'yi iyi kullanın
+*REST API'lerinde uzmanlaşmış bir framework kullanın 
+
+
+</code></pre>
+
+
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
